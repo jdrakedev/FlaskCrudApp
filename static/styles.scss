@@ -1,0 +1,88 @@
+// Uses for Sassy CSS
+// 1. Can visually see which elements are inside other and have parents.
+// 2. Allows the use of variables
+
+// Color variable
+$primary-color: #007bff;
+$primary-hover-color: #0056b3;
+$success-color: #28a745;
+$success-hover-color: #218838;
+$title-color: #000;
+$sub-title-color: #444;
+$bright-color: #eee;
+$bg-color: wheat;
+$content-color: beige;
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $bg-color;
+}
+    
+.content {
+    max-width: 800px;
+    margin: 50px;
+    padding: 20px;
+    background-color: $content-color;
+    border-radius: 10px;
+    // box-shadow: 0 0 10px rgba($color:0, $alpha:0 1.0);
+    text-align: center;
+
+    h1 {
+        color: $title-color;
+    }
+
+    h4 {
+        color: $sub-title-color;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+
+        th, td {
+            padding: 10px;
+            border: 1px solid $primary-hover-color;
+        }
+
+        th {
+            background-color: $bright-color;
+            color: #333;
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 8px 16px;
+        margin: 5px;
+        border-radius: 20px;
+        background-color: $primary-color;
+        color: $bright-color;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $primary-hover-color;
+        }
+    }
+
+    input {
+        padding: 10px;
+        margin: 5px;
+        border: solid 1px;
+        border-radius: 5px;
+    }
+
+    #btn_add {
+        background-color: $success-color;
+        color: $bright-color;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $success-hover-color;
+        }
+    }
+}
+
